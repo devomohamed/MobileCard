@@ -1,0 +1,182 @@
+$x: 95.93px;
+$y: calc($x + 57px);
+
+
+.mobile-chat {
+    width: 60vw;
+    height: calc(100vh - 70px);
+    position: relative;
+    //     &::after{
+    //     content: "";
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url('../../../assets/pngwing.com@2x.png');
+    //     z-index: 5;
+    //     left: 0;
+    //     background-size: cover;
+    // }
+
+    .head-screen{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ede7e7;
+        .notification-center {
+            width: inherit;
+            padding: 1rem 0;
+            .icons{
+                img{
+                    margin: 0 .4rem;
+                }
+            }
+            .time{
+                font-weight: bold;
+                font-size: .6rem;
+            }
+        }
+        .sender {
+            padding-bottom: .6rem;
+            height: fit-content;
+            .image{
+                padding: .6rem;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+            .name{
+                margin-left: .6rem;
+            }
+        }
+    }
+    .body-screen {
+        background-image: url('../../../assets/wtsapp-bg.jpeg');
+        height: calc(100% - $y);
+        // border-radius: 0 0 26px 26px;
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: $x;
+        // z-index: 20;
+        overflow-x: auto;
+    
+        .date {
+            text-align: center;
+            // margin: 10px;
+            padding: 24px;
+    
+            span {
+                padding: 5px 15px;
+                background-color: #FCF7C2;
+                border-radius: 50px;
+                width: fit-content;
+            }
+        }
+    
+        .card-message {
+            background-color: #fff;
+            padding: 5px;
+            width: fit-content;
+            margin-left: 20px;
+            border-radius: 10px;
+            max-width: 70%;
+            position: relative;
+    
+            &::after {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 13px solid transparent;
+                border-bottom: 7px solid transparent;
+                border-right: 20px solid #fff;
+                background-color: transparent;
+                left: -14px;
+                bottom: 10px;
+    
+            }
+    
+            .image {
+                width: fit-content;
+    
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+    
+                margin-bottom: 10px;
+            }
+    
+            .text {
+                height: 42px;
+                overflow: auto;
+                margin-bottom: 10px;
+            }
+    
+            .muted-text {
+                color: #6c757d;
+                opacity: 0.6;
+    
+                .text-left {
+                    margin-bottom: 5px;
+                }
+            }
+    
+            .buttons {
+                text-align: center;
+                margin-top: 10px;
+    
+                ul {
+                    li {
+                        padding: 10px 0;
+                        border-top: 1px solid #E3DAD3;
+    
+                        a {
+                            color: #007bff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .foot-screen {
+        position: absolute;
+        width: inherit;
+        bottom: 0;
+        left: 0;
+        background-color: #ede7e7;
+        border-radius: 0 0 26px 26px;
+        padding: 1rem;
+        img{
+            width: 17px;
+        }
+        .input {
+            position: relative;
+            input {
+                border: navajowhite;
+                border-radius: 10px;
+                height: 25px;
+            }
+            img{
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .icons{
+            // width: 47px;
+            img:last-of-type{
+                width: 12.7px;
+                margin-left: 1rem;
+            }
+        }
+        .icon{
+            img{
+                // margin-left: 5px;
+            }
+        }
+    
+    }
+
+}
